@@ -888,7 +888,7 @@
 // add user conditional formating
 
 var Baby = require('babyparse')
-// browserify pidmft.js > bundle.js
+// browserify product_order.js > bundle.js
 
 $('.format-btn').on('click', function() {
 	var prodPgID = $('.prod-pg-id').val().trim()
@@ -904,8 +904,8 @@ $('.format-btn').on('click', function() {
 	console.log(parProdPgID)
 	console.log(parProdVar)
 	console.log("---------------")
-	console.log(combine(parProdPgID, parProdVar))
-	console.log(combine(parOrderPgID, parOrderVar))
+	// console.log(combine(parProdPgID, parProdVar))
+	// console.log(combine(parOrderPgID, parOrderVar))
 
 	var productData = combine(parProdPgID, parProdVar)
 	var orderData = combine(parOrderPgID, parOrderVar)
@@ -924,14 +924,14 @@ function combine(a, b) {
 
 function compare(prod, order) {
 	var results = []
-	while (prod.length > 1) {
-		product_being_compared = prod.shift()
-		console.log(product_being_compared)
-		for(i=0; i < order.length; i++) {
-			if (order[i] === product_being_compared) {
-				results.push(order[i] + " - MATCHED")
-			} else {
-				results.push(order[i])
+	while (order.length > 0) {
+		order_being_compared = order.shift()
+		for(i=0; i < prod.length; i++) {
+			if (order_being_compared === prod[i]) {
+				results.push(order_being_compared + " - MATCHED")
+				i = prod.length
+			} else if ((i+1) >= prod.length) {
+				results.push(order_being_compared)
 			}
 		}
 	}
@@ -966,5 +966,6 @@ function prettyPrint(array) {
 		$('.new-data').val($('.new-data').val() + array[i] + "\n")
 	}
 }
+
 
 },{"babyparse":2}]},{},[3]);
