@@ -1,0 +1,77 @@
+.container {
+ 	min-width: 1200px;
+}
+.header {
+	text-align: center;
+	padding: 20px;
+	color: darkred;
+	letter-spacing: 1.5px;
+}
+/*--------------------------*/
+.product-container, .plus-container, .order-container {
+	padding: 10px;
+}
+/*--------------------------*/
+.product-data {
+	background-color: floralwhite;
+	border-radius: 3px;
+}
+/*--------------------------*/
+.plus {
+	padding-top: 130px;
+	padding-bottom: 50px;
+	text-align: center;
+	font-size: 40px;
+}
+.plus-label {
+	left: 15px;
+	letter-spacing: 1.5px;
+}
+.inpt {
+	padding: 1.5px;
+}
+/*.ugc-id {
+	color: darkgoldenrod;
+}*/
+/*--------------------------*/
+.order-data {
+	background-color: floralwhite;
+	border-radius: 3px;
+}
+/*--------------------------*/
+.title {
+	padding-top: 6px;
+	padding-bottom: 12px;
+}
+.descriptor {
+	font-size: 13px;
+}
+.the-button-container {
+	padding-top: 50px;
+	text-align: center;
+}
+.format-btn {
+	transition: background 0.8s ease;
+	background: darkred;
+	border: none;
+}
+.format-btn:hover {
+	transition: background 0.8s ease;
+	background: darkolivegreen;
+}
+.lil-button-container {
+	padding-top: 10px;
+	text-align: center;
+}
+.lil-button {
+	width: 100px;
+	background: none;
+	border: 1px solid darkred;
+}
+.lil-button:hover {
+	transition: background 0.8s ease;
+	transition: color 0.8s ease;
+	background: darkolivegreen;
+	color: white;
+	border: none;
+}
